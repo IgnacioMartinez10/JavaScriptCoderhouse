@@ -6,12 +6,11 @@ class Tarea {
 }
 
 
-//  Evento para guardar formulario pelicula
+
 let formulario = document.getElementById("formularioTareas");
 formulario.addEventListener("submit", guardarTarea);
 
 
-//  Funcion para guardar pelicula
 function guardarTarea(e) {
 	e.preventDefault();
 
@@ -28,7 +27,7 @@ function guardarTarea(e) {
 	document.getElementById("formularioTareas").reset();
 }
 
-//  Funcion para cargar listado del localStorage o iniciarlo si no hay
+
 function cargarListaDeTareas() {
 	let listaDeTareas = JSON.parse(localStorage.getItem("listaDeTareas"));
 	if (listaDeTareas == null) {
@@ -37,13 +36,13 @@ function cargarListaDeTareas() {
 	return listaDeTareas;
 }
 
-//  Funcion para guardar en localStorage
+
 function guardarListaDeTareas(listaDeTareas) {
 	localStorage.setItem("listaDeTareas", JSON.stringify(listaDeTareas));
 	mostrarListaDeTareas(listaDeTareas);
 }
 
-//  Funcion para mostrar listado
+
 function mostrarListaDeTareas(listaDeTareas) {
 	let lista = document.getElementById("lista");
 	lista.textContent = "";
@@ -52,7 +51,7 @@ function mostrarListaDeTareas(listaDeTareas) {
 	});
 }
 
-//  Funcion para armar una tarjeta
+
 function armarTarjeta(elemento) {
 	const tarjeta = document.createElement("div");
 	tarjeta.classList.add("tarjeta");

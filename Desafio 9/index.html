@@ -9,19 +9,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
 </head>
 
-<body>
-    <h1>Lista De Tareas</h1>
-    <div class="container-xl">
+<body>  
+
+    <div class="col-md-4">
+        <h1>Lista De Tareas</h1>
         <form id="formularioTareas">
-            <input id="nombre" type="text" autocomplete="off" placeholder="Nombre">
+            <input id="nombre" type="text" autocomplete="off" placeholder="Tarea">
             <input id="descripcion" type="text" autocomplete="off" placeholder="Descripcion">
-            <input id="btn" class="boton rounded-pill" type="submit" value="Añadir tarea">
+            <input id="btn" class="agregarTarea rounded-pill" type="submit" value="Añadir tarea">
         </form>
 
-        <div id="lista">
+        <div id="empty">
+            <p>No hay tareas pendientes</p>
+        </div>
 
+        <div id="lista">
         </div>
     </div>
 
@@ -32,7 +39,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+
+
 </body>
 
 </html>

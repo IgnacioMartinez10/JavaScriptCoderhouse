@@ -4,12 +4,12 @@ body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
-    background-color: lightseagreen;
+    background-color: rgb(14, 35, 128);
     color: white;
   }
   h1 {
     text-align: center;
-    color: darkslategrey;
+    color:white;
   }
 
   form {
@@ -21,9 +21,47 @@ body {
     outline: none;
     width: 400px;
     margin-left: 2px;
+    border: none;
   }
 
-  #lista{
-    margin-top: 20px;
+  .tarjeta{
     background-color: gray;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: block;
   }
+.descripcion{
+  color: white;
+}
+.borrarTarea{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  border: none;
+  background-color:  #e31746;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 10%;
+  font-size: 1.2em;
+}
+.borrarTarea:hover{
+  cursor: pointer;
+  background-color: #a70f32;
+}
+.agregarTarea{
+  padding: 5px 15px;
+  border: none;
+  color: white;
+  background-color: rgb(167, 167, 167);
+  font-size: 1.4rem;
+  outline: none;
+}
+
+.agregarTarea:hover{
+  cursor: pointer;
+  background-color: #c7c7c7;
+}

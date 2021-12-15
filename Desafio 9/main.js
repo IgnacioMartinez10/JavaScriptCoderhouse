@@ -6,7 +6,6 @@ class Tarea {
 }
 
 
-
 let formulario = document.getElementById("formularioTareas");
 formulario.addEventListener("submit", guardarTarea);
 
@@ -14,17 +13,19 @@ formulario.addEventListener("submit", guardarTarea);
 function guardarTarea(e) {
 	e.preventDefault();
 
-	let nombre = document.getElementById("nombre").value;
-	let descripcion = document.getElementById("descripcion").value;
+	let nombre = $('#nombre').val();
+	let descripcion = $('#descripcion').val();
 
+	if (nombre !== '') {
+		let listaDeTareas = cargarListaDeTareas();
 
-	let listaDeTareas = cargarListaDeTareas();
+		listaDeTareas.push(new Tarea(nombre, descripcion));
 
-	listaDeTareas.push(new Tarea(nombre, descripcion));
+		guardarListaDeTareas(listaDeTareas);
 
-	guardarListaDeTareas(listaDeTareas);
+		document.getElementById("formularioTareas").reset();
+	}
 
-	document.getElementById("formularioTareas").reset();
 }
 
 
@@ -60,11 +61,25 @@ function armarTarjeta(elemento) {
 	nombreTarea.textContent = `${elemento.nombre}`;
 	tarjeta.appendChild(nombreTarea);
 
-	const descripcion = document.createElement("div");
+	const descripcion = document.createElement("p");
 	descripcion.textContent = `Descripcion: ${elemento.descripcion}`;
 	tarjeta.appendChild(descripcion);
 
+	const deleteBtn = document.createElement('button');
+	deleteBtn.textContent = "X";
+	deleteBtn.className = "borrarTarea";
+	tarjeta.appendChild(deleteBtn);
+
 	return tarjeta;
 }
+
+
+deleteBtn.addEventListener('click', (e) => {
+	const item = e.target.parentElement;
+	tarjeta.removeChild(item);
+})
+
+
+
 
 mostrarListaDeTareas(cargarListaDeTareas());

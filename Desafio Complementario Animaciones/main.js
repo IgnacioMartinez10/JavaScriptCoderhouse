@@ -64,10 +64,10 @@ function mostrarListaDeTareas(listaDeTareas) {
 	
 }
 
-function deleteTask(titleTask) {
+function deleteTask(tarea) {
     let listaDeTareas = JSON.parse(localStorage.getItem("listaDeTareas"));
     listaDeTareas.forEach((element, index) => {
-        if (element.nombre == titleTask) {
+        if (element.nombre == tarea) {
             listaDeTareas.splice(index, 1);
         }
     });

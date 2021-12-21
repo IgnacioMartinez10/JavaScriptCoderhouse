@@ -87,7 +87,7 @@ function armarTarjeta(elemento) {
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = "X";
     deleteBtn.className = "borrarTarea";
-	btnDelete.addEventListener("click", function (e) {
+	deleteBtn.addEventListener("click", function (e) {
         deleteTask(e.target.id);
     });
 	tarjeta.appendChild(deleteBtn);

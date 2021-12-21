@@ -9,6 +9,17 @@ class Tarea {
 let formulario = document.getElementById("formularioTareas");
 formulario.addEventListener("submit", guardarTarea);
 
+// ANIMACION //
+$(()=>{
+	$("#btn").css({"background-color": "rgb(167, 167, 167"})
+	$("#btn").mouseenter (function() {
+		$("#btn").css({"background-color": "#c7c7c7"})
+	})
+	$("#btn").mouseleave (function() {
+		$("#btn").css({"background-color": "rgb(167, 167, 167"})
+	})
+
+});
 
 function guardarTarea(e) {
 	e.preventDefault();
@@ -70,9 +81,11 @@ function armarTarjeta(elemento) {
 		empty.style.display = "none";
 		
 	}
+	
 
     return tarjeta;
 }
+
 
 
 

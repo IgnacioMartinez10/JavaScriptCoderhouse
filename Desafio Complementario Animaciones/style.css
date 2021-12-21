@@ -4,7 +4,7 @@
   }
   .container-fluid{
     background-color: gray;
-    height: 100vh;
+    min-height: 100vh;
   }
 .to-do-list {
     font-size: 16px;
@@ -76,14 +76,12 @@
   padding: 5px 15px;
   border: none;
   color: white;
-  background-color: rgb(167, 167, 167);
   font-size: 1.4rem;
   outline: none;
 }
 
 .agregarTarea:hover{
   cursor: pointer;
-  background-color: #c7c7c7;
 }
 .empty{
   margin: 4px;

@@ -66,9 +66,9 @@ function mostrarListaDeTareas(listaDeTareas) {
 
 function deleteTask(tarea) {
     let listaDeTareas = JSON.parse(localStorage.getItem("listaDeTareas"));
-    listaDeTareas.forEach((element, index) => {
+    listaDeTareas.forEach((element, i) => {
         if (element.nombre == tarea) {
-            listaDeTareas.splice(index, 1);
+            listaDeTareas.splice(i, 1);
         }
     });
     localStorage.setItem("listaDeTareas", JSON.stringify(listaDeTareas));

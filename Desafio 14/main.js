@@ -112,6 +112,5 @@ function armarTarjeta(elemento) {
 
 mostrarListaDeTareas(cargarListaDeTareas());
 
-// funciones arreglos localstorage objetos y api (COSAS IMPORTANTES PARA LA TERCER ENTREGA)
 
 

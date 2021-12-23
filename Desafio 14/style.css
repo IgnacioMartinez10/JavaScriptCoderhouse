@@ -34,7 +34,7 @@
     border: none;
   }
 
-  .tarjeta{
+  .tarjeta, .card{
     background-color: gray;
     border-radius: 10px;
     margin-top: 20px;

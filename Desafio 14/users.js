@@ -7,7 +7,7 @@ $(() => {
 
     $(".to-do-list").prepend('<button id="get" class="btn btn-info m-2">Mostrar 10 tareas mas realizadas en el 2021</button>');
 
-    $("#get").click(() => {
+    /* $("#get").click(() => {
         $.ajax({
             method: "GET",
             url: URL_TAREAS,
@@ -25,3 +25,8 @@ $(() => {
         });
     });
 })
+ */
+
+//AGREGARLE UN DIV A LAS TAREAS DEL JSON QUE DIGA "ESTAS SON LAS TAREAS MAS REALIZADAS"
+
+//ARREGLAR PORQUE SE CONCATENAN LAS TAREAS MAS REALIZADAS CADA VEZ QUE APRETO EL BOTON

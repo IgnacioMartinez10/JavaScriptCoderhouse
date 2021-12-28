@@ -41,6 +41,7 @@ function guardarTarea(e) {
 
 
 function cargarListaDeTareas() {
+
 	let listaDeTareas = JSON.parse(localStorage.getItem("listaDeTareas"));
 	if (listaDeTareas == null) {
 		return [];
@@ -96,18 +97,9 @@ function armarTarjeta(elemento) {
     });
 	tarjeta.appendChild(deleteBtn);
 	
-	
-	if (lista !== '') {
-		empty.style.display = "none";
-		
-	}
-	
 
     return tarjeta;
 }
-
-
-
 
 
 mostrarListaDeTareas(cargarListaDeTareas());

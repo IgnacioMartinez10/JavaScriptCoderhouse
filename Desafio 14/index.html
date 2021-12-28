@@ -8,26 +8,32 @@
     <title>Lista de tareas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="main.js" defer></script>
-        <script src="users.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <script src="users.js" defer></script>
+    <script src="date.js" defer></script>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="to-do-list col-md-6">
-            <h1>Lista De Tareas</h1>
+            <div class="date">
+                <div class="dateLeft">
+                    <div id="dateNumber"></div>
+                    <div>
+                        <div id="dateMonth"></div>
+                        <div id="dateYear"></div>
+                    </div>
+                </div>
+                <div id="dateText"></div>
+            </div>
             <form id="formularioTareas">
                 <input id="nombre" class="form" type="text" autocomplete="off" placeholder="Tarea">
                 <input id="descripcion" class="form" type="text" autocomplete="off" placeholder="Descripcion">
                 <input id="btn" class="agregarTarea rounded-pill" type="submit" value="Añadir tarea">
             </form>
-
-            <div id="empty" class="empty">
-                <p>No hay tareas pendientes</p>
-            </div>
 
             <div id="lista">
             </div>
@@ -35,7 +41,7 @@
 
         </div>
     </div>
-
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
